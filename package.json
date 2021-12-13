@@ -2,6 +2,15 @@
   "name": "vue-router-redirect-by-link",
   "version": "1.0.0",
   "private": false,
+  "author": "Wei <https://github.com/a65162>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a65162/vue-router-redirect-by-link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a65162/vue-router-redirect-by-link/issues"
+  },
   "files": [
     "dist"
   ],
@@ -14,8 +23,7 @@
       "require": "./dist/vue-router-redirect-by-link.umd.js"
     }
   },
-  "license": "MIT",
-  "scripts": {
+    "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
@@ -59,7 +67,7 @@
     "userUrlFormat": "https://github.com/{{user}}",
     "scripts": {
       "prerelease": "pnpm merge-to-master",
-      "posttag": "pnpm build && pnpm publish && git push --follow-tags origin master; git checkout dev; git merge master; git push origin dev;"
+      "posttag": "pnpm build; pnpm publish; git push --follow-tags origin master; git checkout dev; git merge master; git push origin dev;"
     }
   }
 }
