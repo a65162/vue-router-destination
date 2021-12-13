@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "types": [
+      "vite/client",
+      "node",
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "skipLibCheck": true // unfortunately it should be enabled. https://github.com/microsoft/TypeScript/issues/30511
+  },
+  "include": [
+    "index.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}

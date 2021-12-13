@@ -1,0 +1,65 @@
+{
+  "name": "vue-router-destination",
+  "version": "1.0.0",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-router-destination.umd.js",
+  "module": "./dist/vue-router-destination.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-router-destination.es.js",
+      "require": "./dist/vue-router-destination.umd.js"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "release": "standard-version",
+    "publish": "npm publish --access public",
+    "merge-to-master": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"master\" ]]; then exit 1; else git checkout master && git merge $branch; fi",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@rollup/plugin-strip": "^2.1.0",
+    "@types/lodash-es": "^4.17.5",
+    "@types/node": "^16.11.12",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "standard-version": "^9.3.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.3",
+    "vite": "^2.7.1",
+    "vite-plugin-checker": "^0.3.4",
+    "vite-plugin-dts": "^0.9.6",
+    "vue": "^3.2.26",
+    "vue-router": "^4.0.12",
+    "vue-tsc": "^0.29.8",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "eslint": "^8.4.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "standard-version": {
+    "commitUrlFormat": "https://github.com/{{owner}}/{{repository}}/commit/{{hash}}",
+    "compareUrlFormat": "https://github.com/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+    "issueUrlFormat": "https://github.com/{{owner}}/{{repository}}/issues/{{id}}",
+    "userUrlFormat": "https://github.com/{{user}}",
+    "scripts": {
+      "prerelease": "pnpm merge-to-master",
+      "posttag": "pnpm build && pnpm publish && git push --follow-tags origin master; git checkout dev; git merge master; git push origin dev;"
+    }
+  }
+}
