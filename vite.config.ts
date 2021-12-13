@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
-      name: 'vue-router-destination',
+      name: 'vue-router-redirect-by-link',
     },
   },
   plugins: [

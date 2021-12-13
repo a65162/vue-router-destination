@@ -1,17 +1,17 @@
 {
-  "name": "vue-router-destination",
+  "name": "vue-router-redirect-by-link",
   "version": "1.0.0",
   "private": false,
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-router-destination.umd.js",
-  "module": "./dist/vue-router-destination.es.js",
+  "main": "./dist/vue-router-redirect-by-link.umd.js",
+  "module": "./dist/vue-router-redirect-by-link.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-router-destination.es.js",
-      "require": "./dist/vue-router-destination.umd.js"
+      "import": "./dist/vue-router-redirect-by-link.es.js",
+      "require": "./dist/vue-router-redirect-by-link.umd.js"
     }
   },
   "license": "MIT",
