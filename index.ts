@@ -3,8 +3,8 @@ import type { Plugin } from 'vue'
 import type { Router } from 'vue-router'
 
 export default {
-  install(app, args = {}) {
-    const router = app.config.globalProperties.$router as Router
+  install(app, args) {
+    const router = (app.config.globalProperties.$router ?? args.router) as Router
     if (!router) throw new Error('Vue router is not founed.')
     router.beforeEach((to, from) => {
       const { destination } = from.query

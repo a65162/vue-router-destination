@@ -28,7 +28,6 @@
     "build": "vite build",
     "serve": "vite preview",
     "release": "standard-version",
-    "publish": "npm publish --access public",
     "merge-to-master": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"master\" ]]; then exit 1; else git checkout master && git merge $branch; fi",
     "preinstall": "npx only-allow pnpm"
   },
@@ -67,7 +66,7 @@
     "userUrlFormat": "https://github.com/{{user}}",
     "scripts": {
       "prerelease": "pnpm merge-to-master",
-      "posttag": "pnpm build; pnpm publish; git push --follow-tags origin master; git checkout dev; git merge master; git push origin dev;"
+      "posttag": "pnpm build; npm publish; git push --follow-tags origin master; git checkout dev; git merge master; git push origin dev;"
     }
   }
 }
