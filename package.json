@@ -1,6 +1,6 @@
 {
   "name": "vue-router-redirect-by-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "author": "Wei <https://github.com/a65162>",
   "license": "MIT",
@@ -23,7 +23,7 @@
       "require": "./dist/vue-router-redirect-by-link.umd.js"
     }
   },
-    "scripts": {
+  "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
