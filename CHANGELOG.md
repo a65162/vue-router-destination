@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.1.0...v1.1.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* args.excludes is not set value causes error message ([aa42a96](https://github.com/a65162/vue-router-redirect-by-link/commit/aa42a969c82495b830d32071cf2a9d8a0dc39d46))
+
 ## [1.1.0](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.0.3...v1.1.0) (2021-12-14)
 
 
