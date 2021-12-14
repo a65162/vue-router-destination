@@ -4,7 +4,7 @@ import type { Router } from 'vue-router'
 
 interface Config {
   $router?: Router
-  excludes: RegExp[] | string[]
+  excludes?: RegExp[] | string[]
 }
 
 interface Plugin {
@@ -12,7 +12,7 @@ interface Plugin {
 }
 
 export default {
-  install(app, args = { excludes: [] }) {
+  install(app, args) {
     const $router = args.$router ?? (app.config.globalProperties.$router as Router)
     if (!$router) throw new Error('Vue router is not detected')
     $router.beforeEach((to, from) => {
@@ -22,7 +22,7 @@ export default {
     })
     $router.beforeResolve((to) => {
       const { allowRedirect, destination } = to.query
-      if (!isNull(destination) && isUndefined(allowRedirect) && !args.excludes.some((exclude) => String(destination).match(exclude))) return
+      if (!isNull(destination) && isUndefined(allowRedirect) && !args.excludes?.some((exclude) => String(destination).match(exclude))) return
       delete to.query.allowRedirect
       delete to.query.destination
 
