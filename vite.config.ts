@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: [
     {
       ...strip({
-        include: '**/*.(ts|vue)',
+        include: '**/*.(ts)',
       }),
       apply: 'build',
     },
