@@ -4,6 +4,7 @@
   "private": false,
   "author": "Wei <https://github.com/a65162>",
   "license": "MIT",
+  "keywords": ["vue-router", "vue"],
   "repository": {
     "type": "git",
     "url": "https://github.com/a65162/vue-router-redirect-by-link.git"
