@@ -3,7 +3,7 @@ import type { App } from 'vue'
 import type { Router } from 'vue-router'
 
 interface Config {
-  $router?: Router
+  router?: Router
   excludes?: RegExp[] | string[]
 }
 
@@ -13,7 +13,7 @@ interface Plugin {
 
 export default {
   install(app, args) {
-    const $router = args.$router ?? (app.config.globalProperties.$router as Router)
+    const $router = args.router ?? (app.config.globalProperties.$router as Router)
     if (!$router) throw new Error('Vue router is not detected')
     $router.beforeEach((to, from) => {
       const { destination } = from.query
