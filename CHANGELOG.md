@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.0.3...v1.1.0) (2021-12-14)
+
+
+### Features
+
+* add configuration for this plugin ([864f153](https://github.com/a65162/vue-router-redirect-by-link/commit/864f153711bce901a76d83aea30a25193aabaecc))
+
 ### [1.0.3](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.0.2...v1.0.3) (2021-12-13)
 
 
