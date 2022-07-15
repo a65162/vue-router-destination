@@ -21,8 +21,7 @@ export default defineConfig({
     checker({
       vueTsc: true,
       eslint: {
-        files: ['./'],
-        extensions: ['.ts'],
+        lintCommand: 'eslint "./index.ts"',
       },
     }),
     dts({
