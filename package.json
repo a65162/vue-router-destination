@@ -1,10 +1,13 @@
 {
   "name": "vue-router-redirect-by-link",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "private": false,
   "author": "Wei <https://github.com/a65162>",
   "license": "MIT",
-  "keywords": ["vue-router", "vue"],
+  "keywords": [
+    "vue-router",
+    "vue"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/a65162/vue-router-redirect-by-link.git"

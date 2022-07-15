@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.1.2...v1.1.3) (2022-07-15)
+
+
+### Bug Fixes
+
+* removing allowRedirect or destination in route query should execute before page is loaded ([8f6884d](https://github.com/a65162/vue-router-redirect-by-link/commit/8f6884d46c257d864df9fa0e2060b77d5d6b7206))
+
 ### [1.1.2](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.1.1...v1.1.2) (2021-12-14)
 
 ### [1.1.1](https://github.com/a65162/vue-router-redirect-by-link/compare/v1.1.0...v1.1.1) (2021-12-14)
