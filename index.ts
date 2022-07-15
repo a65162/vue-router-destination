@@ -14,15 +14,20 @@ interface Plugin {
 export default {
   install(app, args) {
     const $router = args.router ?? (app.config.globalProperties.$router as Router)
+
     if (!$router) throw new Error('Vue router is not detected')
+
     $router.beforeEach((to, from) => {
       const { destination } = from.query
       const { allowRedirect } = to.query
+
       return (!isUndefined(destination) && !isUndefined(allowRedirect) && destination !== to.fullPath && String(destination)) || true
     })
-    $router.beforeResolve((to) => {
+    $router.beforeEach((to) => {
       const { allowRedirect, destination } = to.query
+
       if (!isNull(destination) && isUndefined(allowRedirect) && !args.excludes?.some((exclude) => String(destination).match(exclude))) return
+
       delete to.query.allowRedirect
       delete to.query.destination
 
